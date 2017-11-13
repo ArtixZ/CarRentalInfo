@@ -3,3 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+[class^="ant-col-"] {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}

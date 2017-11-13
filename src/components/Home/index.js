@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
-import { Row } from 'react-bootstrap';
+import { Row, Col } from 'antd';
+
+import LeftPanel from "../LeftPanel";
+import RightPanel from '../RightPanel';
 
 class Home extends Component {
 
     render() {
-        
         return (
             <Row>
-                <div className="col-md-5">
-                    <div>
-                    </div>
-                </div>
+                <Col span={10}>
+                    <LeftPanel />
+                </Col>
+                <Col span={14}>
+                    <RightPanel />
+                </Col>
             </Row>
         )
     }
-}
-
-const mapStateToProps = (state) => {
-    return {stories: state.homeStories}
 }
 
 export default Home
